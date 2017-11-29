@@ -21,11 +21,9 @@ class Base extends Controller
 
             $this->redirect(url('login/index'));
         }
-
         //检测权限
         $control = request()->controller();
         $action = request()->action();
-
         //跳过登录系列的检测以及主页权限
         if(!in_array($control, ['login', 'index'])){
 
